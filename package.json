@@ -1,11 +1,11 @@
 {
   "name": "orbit-controls-es6",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Threejs orbit controls update for ES6",
-  "main": "index.js",
+  "main": "build/orbit-controls-es6.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify index.js > build/orbit-controls-es6.js"
+    "build": "browserify src/index.js > build/orbit-controls-es6.js"
   },
   "author": "Silvio Paganini | s2paganini.com",
   "license": "ISC",
@@ -20,7 +20,7 @@
     "type": "git",
     "url": "https://github.com/silviopaganini/orbit-controls-es6.git"
   },
-  "module": "index.js",
+  "module": "src/index.js",
   "dependencies": {
     "babel-preset-es2015": "^6.3.13",
     "browserify": "^13.0.0",
