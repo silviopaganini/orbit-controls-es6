@@ -1,0 +1,118 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/silviopaganini/.nvm/versions/node/v6.3.1/bin/node',
+1 verbose cli   '/Users/silviopaganini/.nvm/versions/node/v6.3.1/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.3
+3 info using node@v6.3.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/silviopaganini/Workspace/openSource/orbit-controls-es6',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/silviopaganini/.npm/orbit-controls-es6/1.0.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/silviopaganini/.npm correctMkdir not in flight; initializing
+10 info lifecycle orbit-controls-es6@1.0.0~prepublish: orbit-controls-es6@1.0.0
+11 silly lifecycle orbit-controls-es6@1.0.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/silviopaganini/.npm/orbit-controls-es6/1.0.0/package.tgz',
+12 verbose tar pack   '/Users/silviopaganini/Workspace/openSource/orbit-controls-es6' ]
+13 verbose tarball /Users/silviopaganini/.npm/orbit-controls-es6/1.0.0/package.tgz
+14 verbose folder /Users/silviopaganini/Workspace/openSource/orbit-controls-es6
+15 verbose addLocalTarball adding from inside cache /Users/silviopaganini/.npm/orbit-controls-es6/1.0.0/package.tgz
+16 verbose correctMkdir /Users/silviopaganini/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd orbit-controls-es6@1.0.0
+18 verbose afterAdd /Users/silviopaganini/.npm/orbit-controls-es6/1.0.0/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/silviopaganini/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/silviopaganini/.npm/orbit-controls-es6/1.0.0/package/package.json written
+21 silly publish { name: 'orbit-controls-es6',
+21 silly publish   version: '1.0.0',
+21 silly publish   description: 'Threejs orbit controls update for ES6',
+21 silly publish   main: 'index.js',
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   author: { name: 'Silvio Paganini | s2paganini.com' },
+21 silly publish   license: 'ISC',
+21 silly publish   contributors:
+21 silly publish    [ { name: 'qiao / https://github.com/qiao' },
+21 silly publish      { name: 'mrdoob / http://mrdoob.com' },
+21 silly publish      { name: 'alteredq / http://alteredqualia.com/' },
+21 silly publish      { name: 'WestLangley / http://github.com/WestLangley' },
+21 silly publish      { name: 'erich666 / http://erichaines.com' } ],
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/silviopaganini/orbit-controls-es6.git' },
+21 silly publish   dependencies:
+21 silly publish    { 'babel-preset-es2015': '^6.3.13',
+21 silly publish      babelify: '^7.2.0',
+21 silly publish      three: '^0.83.0' },
+21 silly publish   readme: '# Orbit Controls ES6\n\nLittle update to Orbit Controls from three.js to support ES6 modules\n\n## Install\n`npm i orbit-controls-es6 --save`\n\n\n## Example\n```js\nimport OrbitControls from \'orbit-controls-es6\';\n\nconst controls = new OrbitControls(camera, renderer.domElement);\ncontrols.enabled = true;\ncontrols.maxDistance = 1500;\ncontrols.minDistance = 0;\n```\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '96b780440d65b27e1d02c4431a81c67f036e41f7',
+21 silly publish   bugs: { url: 'https://github.com/silviopaganini/orbit-controls-es6/issues' },
+21 silly publish   homepage: 'https://github.com/silviopaganini/orbit-controls-es6#readme',
+21 silly publish   _id: 'orbit-controls-es6@1.0.0',
+21 silly publish   _shasum: '69f8328b1245889f33fc4aa77b7e1ddfb2f9e7a0',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name orbit-controls-es6
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'orbit-controls-es6',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'orbit-controls-es6',
+26 silly mapToRegistry   name: 'orbit-controls-es6',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/orbit-controls-es6
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/silviopaganini/.npm/orbit-controls-es6/1.0.0/package.tgz
+30 verbose request uri https://registry.npmjs.org/orbit-controls-es6
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 10:17:39 AM
+33 verbose request using bearer token for auth
+34 verbose request id 6b73991f1e2942e3
+35 http request PUT https://registry.npmjs.org/orbit-controls-es6
+36 http 403 https://registry.npmjs.org/orbit-controls-es6
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Wed, 11 Jan 2017 10:17:40 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-lcy1130-LCY',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1484129859.790896,VS0,VE836',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating /Users/silviopaganini/.npm/registry.npmjs.org/orbit-controls-es6 on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : orbit-controls-es6
+40 verbose stack     at makeError (/Users/silviopaganini/.nvm/versions/node/v6.3.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/Users/silviopaganini/.nvm/versions/node/v6.3.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+40 verbose stack     at Request._callback (/Users/silviopaganini/.nvm/versions/node/v6.3.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+40 verbose stack     at Request.self.callback (/Users/silviopaganini/.nvm/versions/node/v6.3.1/lib/node_modules/npm/node_modules/request/request.js:200:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (/Users/silviopaganini/.nvm/versions/node/v6.3.1/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+40 verbose stack     at emitOne (events.js:101:20)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/Users/silviopaganini/.nvm/versions/node/v6.3.1/lib/node_modules/npm/node_modules/request/request.js:988:12)
+41 verbose statusCode 403
+42 verbose pkgid orbit-controls-es6
+43 verbose cwd /Users/silviopaganini/Workspace/openSource/orbit-controls-es6
+44 error Darwin 16.3.0
+45 error argv "/Users/silviopaganini/.nvm/versions/node/v6.3.1/bin/node" "/Users/silviopaganini/.nvm/versions/node/v6.3.1/bin/npm" "publish"
+46 error node v6.3.1
+47 error npm  v3.10.3
+48 error code E403
+49 error "You cannot publish over the previously published version 1.0.0." : orbit-controls-es6
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
