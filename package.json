@@ -1,6 +1,6 @@
 {
   "name": "orbit-controls-es6",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Threejs orbit controls update for ES6",
   "main": "src/index.js",
   "scripts": {
