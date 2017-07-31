@@ -368,7 +368,7 @@ export default class OrbitControls extends EventDispatcher {
 
         var element = scope.domElement === document ? scope.domElement.body : scope.domElement;
 
-        if (scope.object.type === PerspectiveCamera.name) {
+        if (Object.getPrototypeOf(scope.object).isPerspectiveCamera) {
 
           // perspective
           var position = scope.object.position;
@@ -382,7 +382,7 @@ export default class OrbitControls extends EventDispatcher {
           panLeft(2 * deltaX * targetDistance / element.clientHeight, scope.object.matrix);
           panUp(2 * deltaY * targetDistance / element.clientHeight, scope.object.matrix);
 
-        } else if (scope.object.type === OrthographicCamera.name) {
+        } else if (Object.getPrototypeOf(scope.object).isOrthographicCamera) {
 
           // orthographic
           panLeft(deltaX * (scope.object.right - scope.object.left) / scope.object.zoom / element.clientWidth, scope.object.matrix);
@@ -402,11 +402,11 @@ export default class OrbitControls extends EventDispatcher {
 
     function dollyIn(dollyScale) {
 
-      if (scope.object.type === PerspectiveCamera.name) {
+      if (Object.getPrototypeOf(scope.object).isPerspectiveCamera) {
 
         scale /= dollyScale;
 
-      } else if (scope.object.type === OrthographicCamera.name) {
+      } else if (Object.getPrototypeOf(scope.object).isOrthographicCamera) {
 
         scope.object.zoom = Math.max(scope.minZoom, Math.min(scope.maxZoom, scope.object.zoom * dollyScale));
         scope.object.updateProjectionMatrix();
@@ -423,11 +423,11 @@ export default class OrbitControls extends EventDispatcher {
 
     function dollyOut(dollyScale) {
 
-      if (scope.object.type === PerspectiveCamera.name) {
+      if (Object.getPrototypeOf(scope.object).isPerspectiveCamera) {
 
         scale *= dollyScale;
 
-      } else if (scope.object.type === OrthographicCamera.name) {
+      } else if (Object.getPrototypeOf(scope.object).isOrthographicCamera) {
 
         scope.object.zoom = Math.max(scope.minZoom, Math.min(scope.maxZoom, scope.object.zoom / dollyScale));
         scope.object.updateProjectionMatrix();
