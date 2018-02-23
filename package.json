@@ -8,7 +8,7 @@
     "build": "browserify src/index.js > build/orbit-controls-es6.js"
   },
   "author": "Silvio Paganini | s2paganini.com",
-  "license": "ISC",
+  "license": "Unlicense",
   "contributors": [
     {"name": "qiao / https://github.com/qiao"},
     {"name": "mrdoob / http://mrdoob.com"},
