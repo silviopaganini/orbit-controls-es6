@@ -2,7 +2,7 @@
   "name": "orbit-controls-es6",
   "version": "1.0.11",
   "description": "Threejs orbit controls update for ES6",
-  "main": "src/index.js",
+  "main": "build/orbit-controls-es6.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "browserify src/index.js > build/orbit-controls-es6.js"
