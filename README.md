@@ -3,7 +3,7 @@
 Little update to Orbit Controls from three.js to support ES6 modules
 
 ## Install
-`npm i orbit-controls-es6 --save`
+`npm i https://github.com/thanhnhan2tn/orbit-controls-es6.git --save`
 
 
 ## Example
