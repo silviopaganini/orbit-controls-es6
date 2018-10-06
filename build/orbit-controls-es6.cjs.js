@@ -1,4 +1,6 @@
-import { Vector3, MOUSE, Quaternion, Spherical, Vector2, EventDispatcher } from 'three';
+'use strict';
+
+var three = require('three');
 
 /**
  * @author qiao / https://github.com/qiao
@@ -8,7 +10,7 @@ import { Vector3, MOUSE, Quaternion, Spherical, Vector2, EventDispatcher } from 
  * @author erich666 / http://erichaines.com
  */
 
-class OrbitControls extends EventDispatcher {
+class OrbitControls extends three.EventDispatcher {
   constructor (object, domElement) {
     super();
 
@@ -20,7 +22,7 @@ class OrbitControls extends EventDispatcher {
     this.enabled = true;
 
     // "target" sets the location of focus, where the object orbits around
-    this.target = new Vector3();
+    this.target = new three.Vector3();
 
     // How far you can dolly in and out ( PerspectiveCamera only )
     this.minDistance = 0;
@@ -76,9 +78,9 @@ class OrbitControls extends EventDispatcher {
 
     // Mouse buttons
     this.mouseButtons = {
-      ORBIT: MOUSE.LEFT,
-      ZOOM: MOUSE.MIDDLE,
-      PAN: MOUSE.RIGHT
+      ORBIT: three.MOUSE.LEFT,
+      ZOOM: three.MOUSE.MIDDLE,
+      PAN: three.MOUSE.RIGHT
     };
 
     // for reset
@@ -109,14 +111,14 @@ class OrbitControls extends EventDispatcher {
 
     // this method is exposed, but perhaps it would be better if we can make it private...
     this.update = (function () {
-      var offset = new Vector3();
+      var offset = new three.Vector3();
 
       // so camera.up is the orbit axis
-      var quat = new Quaternion().setFromUnitVectors(object.up, new Vector3(0, 1, 0));
+      var quat = new three.Quaternion().setFromUnitVectors(object.up, new three.Vector3(0, 1, 0));
       var quatInverse = quat.clone().inverse();
 
-      var lastPosition = new Vector3();
-      var lastQuaternion = new Quaternion();
+      var lastPosition = new three.Vector3();
+      var lastQuaternion = new three.Quaternion();
 
       return function update () {
         var position = scope.object.position;
@@ -239,24 +241,24 @@ class OrbitControls extends EventDispatcher {
     var EPS = 0.000001;
 
     // current position in spherical coordinates
-    var spherical = new Spherical();
-    var sphericalDelta = new Spherical();
+    var spherical = new three.Spherical();
+    var sphericalDelta = new three.Spherical();
 
     var scale = 1;
-    var panOffset = new Vector3();
+    var panOffset = new three.Vector3();
     var zoomChanged = false;
 
-    var rotateStart = new Vector2();
-    var rotateEnd = new Vector2();
-    var rotateDelta = new Vector2();
+    var rotateStart = new three.Vector2();
+    var rotateEnd = new three.Vector2();
+    var rotateDelta = new three.Vector2();
 
-    var panStart = new Vector2();
-    var panEnd = new Vector2();
-    var panDelta = new Vector2();
+    var panStart = new three.Vector2();
+    var panEnd = new three.Vector2();
+    var panDelta = new three.Vector2();
 
-    var dollyStart = new Vector2();
-    var dollyEnd = new Vector2();
-    var dollyDelta = new Vector2();
+    var dollyStart = new three.Vector2();
+    var dollyEnd = new three.Vector2();
+    var dollyDelta = new three.Vector2();
 
     function getAutoRotationAngle () {
       return 2 * Math.PI / 60 / 60 * scope.autoRotateSpeed
@@ -275,7 +277,7 @@ class OrbitControls extends EventDispatcher {
     }
 
     var panLeft = (function () {
-      var v = new Vector3();
+      var v = new three.Vector3();
 
       return function panLeft (distance, objectMatrix) {
         v.setFromMatrixColumn(objectMatrix, 0); // get X column of objectMatrix
@@ -286,7 +288,7 @@ class OrbitControls extends EventDispatcher {
     }());
 
     var panUp = (function () {
-      var v = new Vector3();
+      var v = new three.Vector3();
 
       return function panUp (distance, objectMatrix) {
         v.setFromMatrixColumn(objectMatrix, 1); // get Y column of objectMatrix
@@ -298,7 +300,7 @@ class OrbitControls extends EventDispatcher {
 
     // deltaX and deltaY are in pixels; right and down are positive
     var pan = (function () {
-      var offset = new Vector3();
+      var offset = new three.Vector3();
 
       return function pan (deltaX, deltaY) {
         var element = scope.domElement === document ? scope.domElement.body : scope.domElement;
@@ -811,4 +813,4 @@ class OrbitControls extends EventDispatcher {
   }
 }
 
-export default OrbitControls;
+module.exports = OrbitControls;

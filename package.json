@@ -1,35 +1,56 @@
 {
   "name": "orbit-controls-es6",
-  "version": "1.0.12",
+  "version": "2.0.0",
   "description": "Threejs orbit controls update for ES6",
-  "main": "build/orbit-controls-es6.js",
+  "main": "build/orbit-controls-es6.cjs.js",
+  "module": "build/orbit-controls-es6.es6.js",
+  "browser": "build/orbit-controls-es6.umd.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify src/index.js > build/orbit-controls-es6.js"
+    "lint": "standard ./src --fix",
+    "prebuild": "yarn lint",
+    "build": "rollup -c"
   },
   "author": "Silvio Paganini | s2paganini.com",
   "license": "Unlicense",
   "contributors": [
-    {"name": "qiao / https://github.com/qiao"},
-    {"name": "mrdoob / http://mrdoob.com"},
-    {"name": "alteredq / http://alteredqualia.com/"},
-    {"name": "WestLangley / http://github.com/WestLangley"},
-    {"name": "erich666 / http://erichaines.com"}
+    {
+      "name": "qiao / https://github.com/qiao"
+    },
+    {
+      "name": "mrdoob / http://mrdoob.com"
+    },
+    {
+      "name": "alteredq / http://alteredqualia.com/"
+    },
+    {
+      "name": "WestLangley / http://github.com/WestLangley"
+    },
+    {
+      "name": "erich666 / http://erichaines.com"
+    }
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/silviopaganini/orbit-controls-es6.git"
   },
-  "module": "src/index.js",
   "dependencies": {
-    "babel-preset-es2015": "^6.3.13",
-    "browserify": "^13.0.0",
-    "babelify": "^7.2.0",
-    "three": "^0.83.0"
+    "three": "0.97.0"
   },
-  "browserify": {
-    "transform": [
-      "babelify"
+  "standard": {
+    "ignore": [
+      "/build/*"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "rollup": "0.66.4",
+    "rollup-plugin-babel": "^4.0.3",
+    "standard": "12.0.1"
+  },
+  "babel": {
+    "presets": [
+      "env"
     ]
   }
 }
